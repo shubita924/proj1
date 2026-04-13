@@ -1,7 +1,8 @@
-House Prices - Advanced Regression Techniques
+# House Prices - Advanced Regression Techniques
+
 კონკურსის მიმოხილვა
 
-Kaggle-ის House Prices კონკურსის მიზანია საცხოვრებელი სახლების ფასის პროგნოზირება სხვადასხვა მახასიათებლის საფუძველზე (მაგ: ფართობი, მდებარეობა, ხარისხი და ა.შ.).
+### Kaggle-ის House Prices კონკურსის მიზანია საცხოვრებელი სახლების ფასის პროგნოზირება სხვადასხვა მახასიათებლის საფუძველზე (მაგ: ფართობი, მდებარეობა, ხარისხი და ა.შ.).
 
 მოდელი ფასდება Root Mean Squared Error (RMSE) მეტრიკით ლოგარითმულ სკალაზე (log RMSE).
 
@@ -15,7 +16,8 @@ proj1/
 ფაილი აღწერა
 experiment.ipynb მონაცემთა ანალიზი, preprocessing, feature engineering და მოდელების ექსპერიმენტები
 inference.ipynb საბოლოო მოდელის გამოყენება test მონაცემებზე და submission გენერაცია
-მონაცემთა გაწმენდა და დამუშავება (Cleaning & Preprocessing)
+
+## მონაცემთა გაწმენდა და დამუშავება (Cleaning & Preprocessing)
 
 1. Missing values ანალიზი
 
@@ -51,7 +53,7 @@ median = X_train[col].median()
 
 მედიანა ავირჩიე იმიტომ, რომ ის უფრო მდგრადია outliers-ის მიმართ.
 
-Feature Engineering
+## Feature Engineering
 
 1. Target transformation
    y = np.log1p(train_df["SalePrice"])
@@ -74,7 +76,8 @@ np.log1p()
 დიდი მნიშვნელობების შემცირება
 outlier-ების გავლენის შემცირება
 უკეთესი განაწილება
-Feature Selection
+
+## Feature Selection
 
 კორელაციის ფილტრი (Threshold = 0.8)
 
@@ -114,7 +117,7 @@ pd.get_dummies()
 
 align()
 
-მოდელი
+## მოდელი
 
 გამოვიყენე XGBoost Regressor:
 
